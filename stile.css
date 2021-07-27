@@ -1,0 +1,48 @@
+.chees__desk{
+  display: flex;
+  flex-wrap: wrap;
+  width:210px ;
+ }
+ .bottom{
+   display: flex;
+   padding-left: 9px;
+   padding-right: 8px;
+ }
+.spears{ padding-bottom: 6px;
+  padding-top: 6px;
+
+}
+.demo{ 
+display: flex;
+  border: red solid 1px;
+  width: 200px;
+  flex-wrap:wrap ;
+ 
+}
+.a{
+  display: flex;
+}
+.b{
+  display: flex;
+}
+.too{
+  display: flex;   
+    width: 25px;
+    height: 25px   
+}
+.too:nth-child(odd){
+  background: black;
+}
+
+.one{display: flex;   
+    width: 25px;
+    height: 25px
+    }
+  .one:nth-child(even){
+     background: black;   
+  }  
+  .basket{
+    padding-left: 30%;
+    font-size: 30px;
+
+  }
