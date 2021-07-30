@@ -22,31 +22,32 @@ console.log(user)
 
 
 
-let basket={
-  shirts:{
-    price:1234,
-    color:"black",
-    size:'l',
-    quntity:3
-  },
-  jeans:{
-    price: 5000,
-    color:"blue",
-  size:"32",
-  quntity:2
-  },
- 
+let basket={ fgd:[
+  {
+      price:1234,
+      color:"black",
+      size:'l',
+      quntity:3
+    },
+    {
+      price: 5000,
+      color:"blue",
+    size:"32",
+    quntity:2
+    },],
+    basketsumm(){
+        let sum=0
+        for(i=0; i<this.fgd.length;i++){
+            sum+=this.fgd[i].price*this.fgd[i].quntity
+        }
+        return(sum)
+
+    }
+   
 }
-function basketSumm(){
-     let summ=0   
- for(let key in basket) {  
-  summ+=(basket[key].price) 
-   }
-   return summ
-  }
-let summ=basketSumm()
-console.log(summ)
- 
- 
+
+
+console.log(basket.basketsumm())
+
 
 
