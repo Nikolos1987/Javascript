@@ -1,0 +1,28 @@
+.cards{
+  width: 500px;
+  height: 500px;
+  background:grey
+}
+ p{
+  margin-left: 50px;
+  color: blue;
+  padding-top: 50px;
+}
+body{
+  display: flex;
+  position:relative
+}
+.basket{
+  margin-top: 50px;
+  position: relative;
+}
+.basket__quntity{
+  position:absolute;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+  right:-20px;
+  top:-10px
+  
+}
