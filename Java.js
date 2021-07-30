@@ -62,42 +62,42 @@ bottomLine.classList.toggle("bottom")
 }
 cheesDask()
 
-let basket={
-  shirts:{
-    price:1234,
-    color:"black",
-    size:'l',
-    quntity:3
-  },
-  jeans:{
-    price: 5000,
-    color:"blue",
-  size:"32",
-  quntity:5
-  },
-}
-function basketSumm(){
-     let summ=0   
- for(let key in basket) {  
-  summ+=(basket[key].price)*(basket[key].quntity) 
-   }
-   return summ
-  }
-let summ=basketSumm()
-function quntitySumm(){
-  let summ=0   
-  for(let key in basket) {  
-   summ+=(basket[key].quntity) 
+
+let basket={ fgd:[
+  {
+      price:1234,
+      color:"black",
+      size:'l',
+      quntity:3
+    },
+    {
+      price: 5000,
+      color:"blue",
+    size:"32",
+    quntity:2
+    },],
+    basketsumm(){
+        let sum=0
+        for(i=0; i<this.fgd.length;i++){
+            sum+=this.fgd[i].price*this.fgd[i].quntity
+        }
+        return(sum)
+
+    },
+    quntitySumm(){
+      let qunt=0
+        for(i=0; i<this.fgd.length;i++){
+            qunt+=this.fgd[i].quntity
     }
-    return summ
-}
-let qunt= quntitySumm()
+    return qunt
+}}
+let sum=basket.basketsumm()
+let qunt= basket.quntitySumm()
 const basketsumm=document.createElement("div")
-console.log(basketsumm)
 const elements=document.querySelector(".chees__desk")
 elements.after(basketsumm)
 basketsumm.classList.toggle('basket')
-basketsumm.innerHTML="сумма товаров = "+summ+ " количество товаров = "+qunt
+basketsumm.innerHTML="сумма товаров = "+sum+ " количество товаров = "+qunt
 if(qunt===0){
   basketsumm.innerHTML="корзина пуста" 
 }
